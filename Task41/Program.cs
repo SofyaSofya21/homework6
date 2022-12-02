@@ -29,60 +29,10 @@ Console.WriteLine($"Количество положительных чисел �
 
 
 
-int ReadInt(string message)
-{
-    Console.Write(message);
-    return Convert.ToInt32(Console.ReadLine());
-}
-
 string ReadString(string message)
 {
     Console.Write(message);
     return Console.ReadLine();
-}
-
-bool CheckValueInArray(string text, char find)
-{
-    bool freeOfValue = true;
-    for (int i = 0; i < text.Length; i++)
-    {
-        if (text[i] == find)
-        {
-            freeOfValue = false;
-            break;
-        }
-    }
-    return freeOfValue;
-}
-
-string RemoveFromArrayValue(string text, char removeValue)
-{
-    int i = 0;
-    string arrayNew = "";
-    int removePosIndex = IndexOf(text, removeValue);
-    for (i = 0; i < arrayNew.Length; i++)
-    {
-        if (i >= removePosIndex)
-            arrayNew += text[i + 1];
-        else
-            arrayNew += text[i];
-    }
-    return arrayNew;
-}
-
-int IndexOf(string array, char find)
-{
-    int i = 0;
-    int position = -1;
-    for (i = 0; i < array.Length; i++)
-    {
-        if (array[i] == find)
-        {
-            position = i;
-            break;
-        }
-    }
-    return position;
 }
 
 // долистать до запятой
